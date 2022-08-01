@@ -1,11 +1,10 @@
 .card_container{
     margin-top: 3rem;
-    margin-left: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 5rem;
-    width: 29rem;
+    width: 14=3rem;
     background-color: var(--color-grey-1);
     border-radius: 6px;
     padding-left: 2rem;
@@ -20,18 +19,45 @@
 
 .card_title h3{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 13px;
     color: var(--color-grey-4);
 }
 
 .card_title div{
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
     color: var(--color-grey-4);
 }
 
 .transaction_type{
     color: var(--color-grey-3);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
+}
+
+@media (min-width: 768px) {
+    .card_container{
+        height: 5rem;
+        width: 18rem;
+        margin-left: 1rem;
+    }
+    .card_title h3{
+        font-size: 16px;
+    }
+    
+    .card_title div{
+        font-size: 12px;
+    }
+    
+    .transaction_type{
+        font-size: 12px;
+    }
+
+    @media (min-width: 1024px) {
+        .card_container{
+            width: 28rem;
+            margin-left: 3rem;
+        } 
+    }
+
 }

@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     border: 1px solid #E9ECEF;
     border-radius: 4px;
-    width: 22.6rem;
+    max-width: 16rem;
     height: 6rem;
     margin-top: 2rem;
 }
@@ -17,15 +17,15 @@
 
 .div_1 h3{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 13px;
     color: var(--color-grey4);
     margin-left: 2rem;
 }
 
 .div_1 div{
     font-weight: 700;
-    font-size: 16px;
-    color: #FD377E;
+    font-size: 13px;
+    color: var(--color-primary-1);
     margin-right: 2rem;
 }
 
@@ -34,4 +34,20 @@
     font-size: 12px;
     color: var(--color-grey3);
     margin-left: 2rem;
+}
+
+@media (min-width: 768px) {
+    
+    .total_container{
+        max-width: 22.6rem;
+        height: 6rem;
+    }
+
+    .div_1 h3{
+        font-size: 16px;
+    }
+
+    .div_1 div{
+        font-size: 16px;
+    }
 }
