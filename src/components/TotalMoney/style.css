@@ -1,0 +1,37 @@
+.total_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+    width: 22.6rem;
+    height: 6rem;
+    margin-top: 2rem;
+}
+
+.div_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.div_1 h3{
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-grey4);
+    margin-left: 2rem;
+}
+
+.div_1 div{
+    font-weight: 700;
+    font-size: 16px;
+    color: #FD377E;
+    margin-right: 2rem;
+}
+
+.total_container p{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-grey3);
+    margin-left: 2rem;
+}

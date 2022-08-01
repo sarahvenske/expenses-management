@@ -1,24 +1,25 @@
 import { useState } from "react";
+import "./style.css"
 
 function Form({ updateList }) {
   const [descriptionInput, setDescriptionInput] = useState("");
   const [valueInput, setValueInput] = useState("");
-  const [typeInput, setTypeInput] = useState("");
+  const [typeInput, setTypeInput] = useState("Entrada");
 
   function saveTransaction() {
     updateList({
       description: descriptionInput,
-      type: valueInput,
-      value: typeInput,
+      type: typeInput,
+      value: parseFloat(valueInput),
     });
     setDescriptionInput("");
     setValueInput("");
-    setTypeInput("");
+    setTypeInput("Entrada");
   }
 
   return (
     <form action="" onSubmit={(event) => event.preventDefault()}>
-      <div>
+      <div className="form_description">
         <label for="description">Descrição</label>
         <input
           type="text"
@@ -27,26 +28,30 @@ function Form({ updateList }) {
           onChange={(event) => setDescriptionInput(event.target.value)}
         />
       </div>
-      <div>
-        <label for="value">Valor</label>
-        <input
-          type="text"
-          id="value"
-          value={valueInput}
-          onChange={(event) => setValueInput(event.target.value)}
-        />
-        <label for="value_type">Tipo de valor</label>
-        <select
-          name="value_type"
-          id="value_type"
-          value={typeInput}
-          onChange={(event) => setValueInput(event.target.value)}
-        >
-          <option value="entrada">Entrada</option>
-          <option value="saída">Saída</option>
-        </select>
+      <div className="form_value_type">
+        <div className="form_value">
+          <label for="value">Valor</label>
+          <input
+            type="text"
+            id="value"
+            value={valueInput}
+            onChange={(event) => setValueInput(event.target.value)}
+          />
+        </div>
+        <div className="form_type">
+          <label for="value_type">Tipo de valor</label>
+          <select
+            name="value_type"
+            id="value_type"
+            value={typeInput}
+            onChange={(event) => setTypeInput(event.target.value)}
+          >
+            <option value="Entrada">Entrada</option>
+            <option value="Saída">Saída</option>
+          </select>
+        </div>
       </div>
-      <button onClick={saveTransaction}>Inserir Valor</button>
+      <button className="form_button" onClick={saveTransaction}>Inserir Valor</button>
     </form>
   );
 }

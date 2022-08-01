@@ -5,9 +5,9 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(33, 37, 41);
+    background-color: var(--color-grey-4);
     font-family: 'Nunito';
-    color: rgb(255, 255, 255);
+    color: var(--color-white);
 }
 
 .loginSection1{
@@ -33,15 +33,19 @@
 
 .loginSection1 button{
     box-sizing: border-box;
-    background-color: rgb(253, 55, 126);
+    background-color: var(--color-primary-1);
     padding: 13px 20px;
-    border: 2px solid rgb(253, 55, 126);
-    color: rgb(255, 255, 255);
+    border: 2px solid  var(--color-primary-1);
+    color:  var(--color-white);
     border-radius: 8px;
     width: 15rem;
     height: 3rem;
     font-weight: 500;
     font-size: 16px;
+}
+
+.loginSection1 button:hover{
+    background-color: var(--color-primary-2);
 }
 
 .loginSection2{

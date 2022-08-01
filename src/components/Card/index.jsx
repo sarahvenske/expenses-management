@@ -1,12 +1,15 @@
-function Card({ transaction }) {
+import "./style.css"
+import { MdDelete } from "react-icons/md"
+ 
+function Card({ transaction, removeItem }) {
   return (
-    <div>
-      <div>
+    <div className="card_container">
+      <div className="card_title">
         <h3>{transaction.description}</h3>
-        <div>{transaction.value}</div>
-        <button>Excluir</button>
+        <div>R$ {transaction.value}</div>
+        <button onClick={() => removeItem(transaction)}><MdDelete/></button>
       </div>
-      <div>{transaction.type}</div>
+      <div className="transaction_type">{transaction.type}</div>
     </div>
   );
 }
