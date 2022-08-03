@@ -6,7 +6,7 @@ function Card({ transaction, removeItem }) {
     <div className="card_container">
       <div className="card_title">
         <h3>{transaction.description}</h3>
-        <div>R$ {transaction.value}</div>
+        <div>R$ {transaction.value.toFixed(2)}</div>
         <button onClick={() => removeItem(transaction)}><MdDelete/></button>
       </div>
       <div className="transaction_type">{transaction.type}</div>

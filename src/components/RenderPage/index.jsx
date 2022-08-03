@@ -10,8 +10,7 @@ import NuKenzie from '../../images/NuKenzie.svg'
 
 function RenderPage({ isLoggedIn, logout, login }) {
   const [listTransactions, setListTransactions] = useState([]);
-
-  console.log(listTransactions)
+  
   function updateList(newTransaction) {
     setListTransactions([...listTransactions, newTransaction]);
   }
@@ -31,13 +30,13 @@ function RenderPage({ isLoggedIn, logout, login }) {
           <button onClick={logout}>Inicio</button>
         </header>
         <main className="main">
-          <section>
+          <section className="section1">
               <Form updateList={updateList} />
             <div>
               <TotalMoney listTransactions={listTransactions} />
             </div>
           </section>
-          <section>
+          <section className="section2">
             <div className="div_nav">
               <h3>Resumo Financeiro</h3>
               <nav>
@@ -46,7 +45,9 @@ function RenderPage({ isLoggedIn, logout, login }) {
                 <button className="button_outcome">Despesas</button>
               </nav>
             </div>
+            <div className="container">
               <List listTransactions={listTransactions} removeItem={removeItem}/>
+            </div>
           </section>
         </main>
       </>

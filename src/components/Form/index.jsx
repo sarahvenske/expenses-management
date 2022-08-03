@@ -6,7 +6,8 @@ function Form({ updateList }) {
   const [valueInput, setValueInput] = useState("");
   const [typeInput, setTypeInput] = useState("Entrada");
 
-  function saveTransaction() {
+  function saveTransaction(event) {
+    event.preventDefault()
     updateList({
       description: descriptionInput,
       type: typeInput,
@@ -18,24 +19,26 @@ function Form({ updateList }) {
   }
 
   return (
-    <form action="" onSubmit={(event) => event.preventDefault()}>
+    <form action="" onSubmit={saveTransaction}>
       <div className="form_description">
-        <label for="description">Descrição</label>
+        <label htmlFor="description">Descrição</label>
         <input
           type="text"
           value={descriptionInput}
           placeholder="Digite aqui sua descrição"
           onChange={(event) => setDescriptionInput(event.target.value)}
+          required
         />
       </div>
       <div className="form_value_type">
         <div className="form_value">
           <label for="value">Valor</label>
           <input
-            type="text"
+            type="number"
             id="value"
             value={valueInput}
             onChange={(event) => setValueInput(event.target.value)}
+            required
           />
         </div>
         <div className="form_type">
@@ -51,7 +54,7 @@ function Form({ updateList }) {
           </select>
         </div>
       </div>
-      <button className="form_button" onClick={saveTransaction}>Inserir Valor</button>
+      <button type="submit" className="form_button">Inserir Valor</button>
     </form>
   );
 }

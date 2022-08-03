@@ -4,9 +4,10 @@
     justify-content: space-evenly;
     border: 1px solid #E9ECEF;
     border-radius: 4px;
-    max-width: 16rem;
     height: 6rem;
     margin-top: 2rem;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .div_1{

@@ -5,9 +5,11 @@ form{
     border: 1px solid var(--color-grey-2);
     border-radius: 4px;
     box-sizing: border-box;
-    max-width: 16rem;
+    width: 95%;
     height: 22rem;
-    padding: 2.3rem 1.7rem;
+    margin: 0 auto;
+    padding: 5%;
+
 }
 
 .form_description{
@@ -36,14 +38,18 @@ form{
 .form_value_type{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .form_value{
     display: flex;
     flex-direction: column;
     margin-right: 0.8rem;
+    width: 80%;
 }
 
 .form_value label{
@@ -64,6 +70,7 @@ form{
 .form_type{
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
 
 .form_type label{
