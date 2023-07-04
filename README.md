@@ -3,7 +3,7 @@
 ## About
 This is a frontend application of an expense management application. It was developed with HTML, CSS, JavaScript, React and contains two pages. 
 
-This project was developed in Module 2 of the FullStack course at Kenzie Academy Brasil.
+This project was developed in Module 3 of the FullStack course at Kenzie Academy Brasil.
 
 ## Technologies Used
 - HTML5
