@@ -18,7 +18,7 @@ This project was developed in Module 2 of the FullStack course at Kenzie Academy
 - Automatic balance calculation
 - Responsive application
 
-## Deploy Vercel:
+## Deploy 
 https://react-entrega-s1-nu-kenzie-sarahvenske-git-master-sarahvenske.vercel.app
 
 
